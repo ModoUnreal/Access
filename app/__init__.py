@@ -38,3 +38,5 @@ def create_app(test_config=None):
         return "Hello, Access!"
 
     return app
+
+app = create_app()
