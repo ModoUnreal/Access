@@ -1,3 +1,12 @@
+"""
+
+(c) 2019 - ModoUnreal
+
+config.py
+
+"""
+
+
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -10,7 +19,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'dev'
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+#    SQLALCHEMY_DATABASE_URI = "postgresql+pg8000://"
 
 
 class ProductionConfig(Config):

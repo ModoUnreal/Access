@@ -2,12 +2,15 @@
 
 (c) 2019 - ModoUnreal
 
+app/__init__.py
+
 """
 
 
 import os
 
-from flask import Flask
+from flask import Flask, render_template
+from flask_sqlalchemy import SQLAlchemy
 
 
 def create_app(test_config=None):
@@ -17,6 +20,8 @@ def create_app(test_config=None):
         SECRET_KEY='notsosecretafterall',
         DATABASE=os.path.join(app.instance_path, 'access.sqlite'),
     )
+    # Define the database instance
+    db = SQLAlchemy(app)
 
     if test_config is None:
         # load the instance config, if it exists, when not testing.
@@ -35,7 +40,7 @@ def create_app(test_config=None):
     # This is a simple view that displays text
     @app.route('/hello')
     def hello():
-        return "Hello, Access!"
+        return render_template('index.html', title='Access: The Search Engine For Services')
 
     return app
 
