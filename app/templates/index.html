@@ -1,0 +1,13 @@
+{# app/templates/index.html #}
+
+{% extends "layout.html" %}
+{% block title %}The index page!{% endblock %}
+{% block body %}
+    {{ super() }}
+    <div class="topnav-searchbar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="posts">
+        <h2>This is a fake post</h2>
+    </div>
+{% endblock %}
