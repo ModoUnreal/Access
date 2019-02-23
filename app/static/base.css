@@ -1,3 +1,7 @@
-h1 {
-    float: centre;
+#title {
+    text-align: center;
+}
+
+#topnav-searchbar {
+    text-align: center;
 }
